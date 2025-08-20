@@ -5,7 +5,7 @@
 
 ---
 
-<h1 align="center">✨ Bahrullo Shukurov ✨</h1>
+<h1 align="center">Bahrullo Shukurov </h1>
 <h3 align="center">Backend & Web Developer</h3>
 
 <p align="center">
