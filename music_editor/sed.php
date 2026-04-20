@@ -5,6 +5,9 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 
 const YTM_SONGS_FILTER = 'EgWKAQIIAWoKEAMQBBAJEAoQBQ==';
+const DEFAULT_RESULT_LIMIT = 35;
+const MAX_RESULT_LIMIT = 35;
+const CURL_TIMEOUT_SECONDS = 15;
 const YTM_REQUIRED_HEADERS = [
     'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
     'Accept-Language: en-US,en;q=0.9',
@@ -88,7 +91,7 @@ function normalizeViews(string $text): string
     }
 
     $digits = preg_replace('/\D+/', '', $matches[1] ?? '');
-    if ($digits === '' || !is_numeric($digits)) {
+    if ($digits === '') {
         return '';
     }
 
@@ -305,15 +308,15 @@ function parseTrack(array $item): ?array
 
 $query = trim((string) ($_GET['q'] ?? ''));
 if ($query === '') {
-    respond(['result' => [], 'error' => 'Missing required parameter: q']);
+    respond(['result' => [], 'error' => 'Missing required query parameter: q']);
 }
 
-$limitRaw = $_GET['limit'] ?? 35;
+$limitRaw = $_GET['limit'] ?? DEFAULT_RESULT_LIMIT;
 $limit = (int) $limitRaw;
 if ($limit <= 0) {
-    $limit = 35;
+    $limit = DEFAULT_RESULT_LIMIT;
 }
-$limit = min($limit, 35);
+$limit = min($limit, MAX_RESULT_LIMIT);
 
 $url = 'https://music.youtube.com/search?' . http_build_query([
     'q' => $query,
@@ -327,7 +330,7 @@ if ($ch === false) {
 
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_TIMEOUT => 15,
+    CURLOPT_TIMEOUT => CURL_TIMEOUT_SECONDS,
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_SSL_VERIFYPEER => true,
     CURLOPT_ENCODING => 'gzip, deflate',
