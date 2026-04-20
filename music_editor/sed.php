@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 header('Content-Type: application/json; charset=utf-8');
 
+const YTM_SONGS_FILTER = 'EgWKAQIIAWoKEAMQBBAJEAoQBQ==';
+const YTM_REQUIRED_HEADERS = [
+    'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Accept-Language: en-US,en;q=0.9',
+    'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Referer: https://music.youtube.com/',
+    'Cookie: CONSENT=YES+; SOCS=CAISNQgDEitib3FfaWRlbnRpdHlmcm9udGVuZHVpX20yMDIzMDgyOC4xMl9wMRoCZW4gAQ..',
+];
+
 function respond(array $payload): void
 {
     echo json_encode($payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
@@ -202,9 +211,6 @@ function parseTrack(array $item): ?array
 
     $title = extractText(getByPath($item, ['flexColumns', 0, 'musicResponsiveListItemFlexColumnRenderer', 'text']));
     if ($title === '') {
-        $title = extractText(getByPath($item, ['overlay', 'musicItemThumbnailOverlayRenderer', 'content', 'musicPlayButtonRenderer', 'playNavigationEndpoint', 'watchEndpoint', 'videoId']));
-    }
-    if ($title === '') {
         return null;
     }
 
@@ -311,7 +317,7 @@ $limit = min($limit, 35);
 
 $url = 'https://music.youtube.com/search?' . http_build_query([
     'q' => $query,
-    'sp' => 'EgWKAQIIAWoKEAMQBBAJEAoQBQ==',
+    'sp' => YTM_SONGS_FILTER,
 ]);
 
 $ch = curl_init($url);
@@ -325,13 +331,7 @@ curl_setopt_array($ch, [
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_SSL_VERIFYPEER => true,
     CURLOPT_ENCODING => 'gzip, deflate',
-    CURLOPT_HTTPHEADER => [
-        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'Accept-Language: en-US,en;q=0.9',
-        'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Referer: https://music.youtube.com/',
-        'Cookie: CONSENT=YES+; SOCS=CAISNQgDEitib3FfaWRlbnRpdHlmcm9udGVuZHVpX20yMDIzMDgyOC4xMl9wMRoCZW4gAQ..',
-    ],
+    CURLOPT_HTTPHEADER => YTM_REQUIRED_HEADERS,
 ]);
 
 $html = curl_exec($ch);
