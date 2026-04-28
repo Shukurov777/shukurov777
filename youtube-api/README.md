@@ -20,7 +20,7 @@
    - [GET /api/playlists/items](#get-apiplaylistsitems)
    - [GET /api/featured/top](#get-apifeaturedtop)
    - [GET /api/featured/trending](#get-apifeaturedtrending)
-   - [GET /api/featured/best-of](#get-apifeaturedбest-of)
+   - [GET /api/featured/best-of](#get-apifeatured-best-of)
    - [GET /api/featured/live](#get-apifeaturedlive)
    - [GET /api/featured/upcoming](#get-apifeaturedupcoming)
 7. [Parameter Tables](#parameter-tables)
@@ -290,7 +290,7 @@ GET /api/featured/trending?regionCode=RU&maxResults=10
 
 ---
 
-### GET /api/featured/best-of
+### GET /api/featured/best-of {#get-apifeatured-best-of}
 
 Best-of wrapper: searches by `viewCount` (descending) and enriches each result with full `statistics` + `contentDetails`.
 
