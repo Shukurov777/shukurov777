@@ -28,6 +28,39 @@
 
 ---
 
+## 🎬 YouTube API
+
+Максимальный REST API-обёртка над **YouTube Data API v3** — поиск со всеми параметрами, топ по странам, trending, live-стримы и многое другое.
+
+📂 **[youtube-api/](./youtube-api/)** — исходный код  
+📖 **[youtube-api/README.md](./youtube-api/README.md)** — полная документация
+
+### Быстрый старт
+
+```bash
+cd youtube-api
+npm install
+cp .env.example .env   # добавьте YOUTUBE_API_KEY
+npm start
+```
+
+### Эндпоинты
+
+| Метод | Путь | Описание |
+|-------|------|----------|
+| `GET` | `/api/search` | Поиск с 25+ параметрами |
+| `GET` | `/api/videos` | Детали видео по ID |
+| `GET` | `/api/channels` | Информация о каналах |
+| `GET` | `/api/playlists` | Метаданные плейлистов |
+| `GET` | `/api/playlists/items` | Видео внутри плейлиста |
+| `GET` | `/api/featured/top` | Топ по стране/категории |
+| `GET` | `/api/featured/trending` | Trending (mostPopular chart) |
+| `GET` | `/api/featured/best-of` | Best-of по просмотрам |
+| `GET` | `/api/featured/live` | Текущие live-трансляции |
+| `GET` | `/api/featured/upcoming` | Предстоящие события |
+
+---
+
 ## ⚡ Статистика
 
 <p align="center">
