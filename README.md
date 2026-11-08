@@ -41,11 +41,13 @@
 
 <br/><br/>
 
+[![TgPilot](https://img.shields.io/badge/✈️_TgPilot-Telegram_MCP_for_AI_agents-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://github.com/Shukurov777/tgpilot)
+
 [![stackcv](https://img.shields.io/badge/stackcv-repo-0ea5e9?style=for-the-badge&logo=github)](https://github.com/Shukurov777/stackcv)
 [![hitmoz](https://img.shields.io/badge/hitmoz--parser-repo-8b5cf6?style=for-the-badge&logo=github)](https://github.com/Shukurov777/hitmoz-parser)
 [![finflow](https://img.shields.io/badge/finflow--vuetify-repo-6366f1?style=for-the-badge&logo=github)](https://github.com/Shukurov777/finflow-vuetify)
 [![gamevault](https://img.shields.io/badge/gamevault-repo-22c55e?style=for-the-badge&logo=github)](https://github.com/Shukurov777/gamevault)
-[![taskflow](https://img.shields.io/badge/taskflow-repo-f59e0b?style=for-the-badge&logo=github)](https://github.com/Shukurov777/taskflow-)
+[![taskflow](https://img.shields.io/badge/taskflow-repo-f59e0b?style=for-the-badge&logo=github)](https://github.com/Shukurov777/taskflow)
 
 <br/>
 
@@ -102,7 +104,7 @@
 - **[hitmoz-parser](https://github.com/Shukurov777/hitmoz-parser)** — JSON API каталога музыки (PHP + Python)
 - **[finflow-vuetify](https://github.com/Shukurov777/finflow-vuetify)** — финансы, Vue 3 + Vuetify
 - **[gamevault](https://github.com/Shukurov777/gamevault)** — коллекция игр, Vue 3 SPA
-- **[taskflow-](https://github.com/Shukurov777/taskflow-)** — менеджер задач, Vue 3
+- **[taskflow-](https://github.com/Shukurov777/taskflow)** — менеджер задач, Vue 3
 
 ### 🤖 ИИ
 
@@ -159,7 +161,7 @@ Web developer since **2024**. **Telegram bots** → **freelance** landing pages 
 - **[hitmoz-parser](https://github.com/Shukurov777/hitmoz-parser)** — music catalog JSON API (PHP + Python)
 - **[finflow-vuetify](https://github.com/Shukurov777/finflow-vuetify)** — finance UI, Vue 3 + Vuetify
 - **[gamevault](https://github.com/Shukurov777/gamevault)** — game collection SPA, Vue 3
-- **[taskflow-](https://github.com/Shukurov777/taskflow-)** — task manager, Vue 3
+- **[taskflow-](https://github.com/Shukurov777/taskflow)** — task manager, Vue 3
 
 ### 🤖 AI
 
