@@ -12,6 +12,10 @@
 
 <table align="center">
   <tr>
+    <td>🎓 <b><a href="https://github.com/Shukurov777/mentor-mode">mentor-mode</a></b></td>
+    <td>Agent skill: your AI explains every change like a senior mentor</td>
+  </tr>
+  <tr>
     <td>💧 <b><a href="https://github.com/Shukurov777/liquid-glass">Liquid Glass</a></b></td>
     <td>Apple Liquid Glass for the web — CSS + real refraction</td>
   </tr>
