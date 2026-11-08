@@ -104,7 +104,7 @@
 - **[hitmoz-parser](https://github.com/Shukurov777/hitmoz-parser)** — JSON API каталога музыки (PHP + Python)
 - **[finflow-vuetify](https://github.com/Shukurov777/finflow-vuetify)** — финансы, Vue 3 + Vuetify
 - **[gamevault](https://github.com/Shukurov777/gamevault)** — коллекция игр, Vue 3 SPA
-- **[taskflow-](https://github.com/Shukurov777/taskflow)** — менеджер задач, Vue 3
+- **[taskflow](https://github.com/Shukurov777/taskflow)** — менеджер задач, Vue 3
 
 ### 🤖 ИИ
 
@@ -161,7 +161,7 @@ Web developer since **2024**. **Telegram bots** → **freelance** landing pages 
 - **[hitmoz-parser](https://github.com/Shukurov777/hitmoz-parser)** — music catalog JSON API (PHP + Python)
 - **[finflow-vuetify](https://github.com/Shukurov777/finflow-vuetify)** — finance UI, Vue 3 + Vuetify
 - **[gamevault](https://github.com/Shukurov777/gamevault)** — game collection SPA, Vue 3
-- **[taskflow-](https://github.com/Shukurov777/taskflow)** — task manager, Vue 3
+- **[taskflow](https://github.com/Shukurov777/taskflow)** — task manager, Vue 3
 
 ### 🤖 AI
 
