@@ -12,6 +12,10 @@
 
 <table align="center">
   <tr>
+    <td>💧 <b><a href="https://github.com/Shukurov777/liquid-glass">Liquid Glass</a></b></td>
+    <td>Apple Liquid Glass for the web — CSS + real refraction</td>
+  </tr>
+  <tr>
     <td>✈️ <b><a href="https://github.com/Shukurov777/tgpilot">TgPilot</a></b></td>
     <td>Telegram MCP server — let AI agents use your account</td>
   </tr>
